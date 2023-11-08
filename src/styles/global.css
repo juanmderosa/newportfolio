@@ -1,0 +1,61 @@
+:root {
+  --violeta: #22014d;
+  --violetaclaro: #22014d;
+  --azul: #3533cd;
+  --blanco: #ffffff;
+}
+/* Normalize */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-weight: 400;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, var(--violeta), var(--azul));
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Anton", sans-serif;
+}
