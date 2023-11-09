@@ -3,6 +3,7 @@ import { HomePage } from "./pages/HomePage";
 import { SobreMiPage } from "./pages/SobreMiPage";
 import { StackPage } from "./pages/StackPage";
 import { ServiciosPage } from "./pages/ServiciosPage";
+import { PortfolioPage } from "./pages/PortfolioPage";
 /* 
 import { useEffect } from "react";
 import { mouseMoveAnimation } from "./helpers/mouseMoveAnimation"; */
@@ -18,6 +19,7 @@ function App() {
       <SobreMiPage />
       <StackPage />
       <ServiciosPage />
+      <PortfolioPage />
     </BrowserRouter>
   );
 }

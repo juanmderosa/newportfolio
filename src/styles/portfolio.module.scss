@@ -1,0 +1,89 @@
+@import "./variables.scss";
+
+.portfolioContainer{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    .exploradorContainer{
+        margin: 0 auto;
+        width: 60%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .portfolioInfoContainer{
+        width: 40%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        .title{
+            font-size: 3rem;
+            letter-spacing: .2rem;
+        }
+        .projectTitle{
+            font-size: 1.5rem;
+        }
+        .arrowsContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            .arrowBack{
+                border: 1px solid $blanco;
+                border-radius: 50%;
+                pad: .5rem;
+                width: 50px;
+                height: 50px;
+                rotate: 180deg;
+                cursor: pointer;
+                transition: all .5s ease;
+                &:hover{
+                    background-color: $violeta;
+                    transform: scale(1.1);
+                }
+            }
+            .arrowForward{
+                border: 1px solid $blanco;
+                border-radius: 50%;
+                pad: .5rem;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                transition: all .5s ease;
+                &:hover{
+                    background-color: $violeta;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .linksContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            .button{
+                background-color: transparent;
+                padding: 1rem 2rem;
+                color: $violeta;
+                font-weight: 500;
+                border: 1px solid $blanco;
+                cursor: pointer;
+                color: $blanco;
+                transition: all 0.5s ease;
+                &:hover{
+                    background-color: $blanco;
+                    color: $violeta;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

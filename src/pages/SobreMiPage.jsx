@@ -1,3 +1,4 @@
+import { Button } from "../components/Button";
 import { Explorador } from "../components/Explorador";
 import styles from "../styles/sobremi.module.scss";
 export const SobreMiPage = () => {
@@ -5,6 +6,13 @@ export const SobreMiPage = () => {
     <section className={styles.sobreMiContainer}>
       <article className={styles.exploradorContainer}>
         <Explorador title="Sobre Mi" />
+        <a
+          href="/juanmderosaCV.pdf"
+          download="Juan Martín De Rosa - Desarrollador Frontend - CV"
+          target="_blank">
+          {" "}
+          <Button text="Descargá mi CV" />
+        </a>
       </article>
       <aside className={styles.sobreMiTextContainer}>
         <p>
