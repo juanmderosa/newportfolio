@@ -1,0 +1,20 @@
+@import "./variables.scss";
+
+.stackContainer{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    .exploradorContainer{
+        margin: 0 auto;
+        width: 50%;
+        padding: 2rem;
+    }
+    .stackListContainer{
+        padding: 2rem;
+        width: 50%;
+        height: 100%;
+    }
+}
