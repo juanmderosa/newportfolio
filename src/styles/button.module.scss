@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./animaciones.scss";
 
 .button{
     background-color: transparent;
@@ -8,9 +9,51 @@
     cursor: pointer;
     color: $blanco;
     transition: all 0.5s ease;
+    opacity: 0;
+    -webkit-animation: scale-in-hor-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s forwards;
+    animation: scale-in-hor-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s forwards;
     &:hover{
         background-color: $blanco;
         color: $violeta;
         transform: scale(1.1);
     }
 }
+
+
+.download{
+    border-width: 5px;
+        border-image: conic-gradient(
+            from var(--angle),
+            $gris 0deg 90deg,
+            $fucsia 90deg 180deg,
+            $blanco 180deg 270deg,
+            $gris 270deg 360deg
+          )
+          1 stretch;
+        background: rgb(255 255 255 / var(--opacity));
+        animation: rotate 4s linear infinite, opacityChange 3s infinite alternate;
+}
+
+  @property --opacity {
+    syntax: "<number>";
+    initial-value: 0.5;
+    inherits: false;
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+@keyframes opacityChange {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }

@@ -127,7 +127,9 @@ export const PortfolioPage = () => {
   };
 
   return (
-    <section className={styles.portfolioContainer}>
+    <section
+      className={styles.portfolioContainer}
+      id="portfolio">
       <article className={styles.exploradorContainer}>
         <ExploradorPortfolio
           projects={projects}

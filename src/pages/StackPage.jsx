@@ -4,7 +4,9 @@ import { StackList } from "../components/StackList";
 
 export const StackPage = () => {
   return (
-    <section className={styles.stackContainer}>
+    <section
+      className={styles.stackContainer}
+      id="stack">
       <article className={styles.exploradorContainer}>
         <Explorador title="Stack" />
       </article>

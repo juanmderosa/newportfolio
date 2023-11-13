@@ -3,7 +3,9 @@ import { Explorador } from "../components/Explorador";
 import styles from "../styles/sobremi.module.scss";
 export const SobreMiPage = () => {
   return (
-    <section className={styles.sobreMiContainer}>
+    <section
+      className={styles.sobreMiContainer}
+      id="sobre-mi">
       <article className={styles.exploradorContainer}>
         <Explorador title="Sobre Mi" />
         <a
