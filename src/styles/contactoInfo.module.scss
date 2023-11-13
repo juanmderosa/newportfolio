@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+.contactInfoList{
+    width: 100%;
+    .contactInfoListItem{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        .contactInfoLogo{
+            width: 50px;
+        }
+    }
+}
+
+.linkContacto{
+    color: white;
+    text-decoration: none;
+}

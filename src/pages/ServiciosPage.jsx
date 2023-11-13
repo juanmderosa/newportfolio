@@ -4,7 +4,9 @@ import { Explorador } from "../components/Explorador";
 
 export const ServiciosPage = () => {
   return (
-    <section className={styles.stackContainer}>
+    <section
+      className={styles.stackContainer}
+      id="servicios">
       <article className={styles.exploradorContainer}>
         <Explorador title="Servicios" />
       </article>
