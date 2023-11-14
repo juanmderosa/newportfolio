@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    .footerText{
+        @media (max-width: $medium){
+            font-size: .8rem;
+        }
+        .footerStrong{
+            font-weight: 600;
+        }
+    }
+}

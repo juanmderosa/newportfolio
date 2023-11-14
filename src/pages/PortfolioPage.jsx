@@ -13,8 +13,9 @@ import pricingComponent from "../assets/screenshots/screenshot-pricingcomponent-
 import rnDistribuciones from "../assets/screenshots/screenshot-rndistribuciones.png";
 import timeTracking from "../assets/screenshots/screenshot-timetraking-preview-desktop.png";
 import ecommerceComponent from "../assets/screenshots/screenshot-eccomerce-product-page.png";
-import { useState } from "react";
-import arrow from "../assets/icons/arrow.svg";
+import { useRef, useState } from "react";
+import { PortfolioInfo } from "../components/PortfolioInfo";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const projects = [
   {
@@ -115,59 +116,38 @@ const projects = [
 
 export const PortfolioPage = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const portfolioInfoRef = useRef();
 
-  const prevCard = () => {
-    const newIndex = (selectedIndex - 1 + projects.length) % projects.length;
-    setSelectedIndex(newIndex);
-  };
-
-  const nextCard = () => {
-    const newIndex = (selectedIndex + 1) % projects.length;
-    setSelectedIndex(newIndex);
-  };
+  const { show } = useIntersectionObserver(
+    portfolioInfoRef,
+    "scale-in-ver-center",
+    {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.4,
+    }
+  );
 
   return (
     <section
       className={styles.portfolioContainer}
+      ref={portfolioInfoRef}
       id="portfolio">
-      <article className={styles.exploradorContainer}>
-        <ExploradorPortfolio
-          projects={projects}
-          selectedIndex={selectedIndex}
-        />
-      </article>
-      <aside className={styles.portfolioInfoContainer}>
-        <h2 className={styles.title}>Portfolio</h2>
-        <p className={styles.projectTitle}>{projects[selectedIndex].titulo}</p>
-        <div className={styles.arrowsContainer}>
-          <img
-            src={arrow}
-            onClick={prevCard}
-            alt="arrow back"
-            className={styles.arrowBack}
+      {show && (
+        <>
+          <article className={styles.exploradorContainer}>
+            <ExploradorPortfolio
+              projects={projects}
+              selectedIndex={selectedIndex}
+            />
+          </article>
+          <PortfolioInfo
+            selectedIndex={selectedIndex}
+            setSelectedIndex={setSelectedIndex}
+            projects={projects}
           />
-          <img
-            src={arrow}
-            onClick={nextCard}
-            alt="arrow forward"
-            className={styles.arrowForward}
-          />
-        </div>
-        <div className={styles.linksContainer}>
-          <a
-            href={projects[selectedIndex].repositorio}
-            target="_blank"
-            rel="noreferrer">
-            <button className={styles.button}>Github</button>
-          </a>
-          <a
-            href={projects[selectedIndex].livesite}
-            target="_blank"
-            rel="noreferrer">
-            <button className={styles.button}>Live Site</button>
-          </a>
-        </div>
-      </aside>
+        </>
+      )}
     </section>
   );
 };

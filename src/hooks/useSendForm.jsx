@@ -28,7 +28,6 @@ export const useSendForm = () => {
     })
       .then((response) => {
         if (response.ok) {
-          response.json();
           setIsSended(true);
           reset();
           setTimeout(() => {

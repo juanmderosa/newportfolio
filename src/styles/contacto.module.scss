@@ -3,24 +3,56 @@
 .contactoContainer{
     padding: 2rem;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     gap:2rem;
+    @media (max-width: $large) {
+        height: 100%;
+    }
+    @media (max-width: $medium) {
+        flex-direction: column-reverse;
+        gap:0;
+
+    }
     .exploradorContainer{
         width: 60%;
         padding: 2rem;
+        @media (max-width: $large) {
+            width: 55%;
+            padding-right: 0;
+        }
+        @media (max-width: $medium) {
+            width: 100%;
+            height: 80%;
+            padding: 0;
+        }
     }
     .contactInfoContainer{
         padding: 2rem;
         width: 40%;
         padding-left: 6rem;
+        @media (max-width: $large) {
+            padding-left: 2rem;
+            padding-left: 0;
+            width: 45%;
+        }
+        @media (max-width: $medium) {
+            width: 100%;
+            height: auto;
+            padding: 2rem;
+        }
         .title{
             margin-bottom: 2rem;
             font-size: 3rem;
             letter-spacing: 0.2rem;
+            @media (max-width: $medium) {
+                width: 100%;
+                text-align: center;
+                font-size: 1.6rem;
+            }
         }
     }
 }

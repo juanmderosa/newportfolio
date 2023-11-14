@@ -10,7 +10,11 @@
     align-items: center;
     border-radius: 1rem;
     z-index: 100;
-    
+    @media (max-width: $medium) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: calc(100% - 2rem);
+    }
     .nav{
         .navUl{
             width: 100%;
@@ -19,6 +23,11 @@
             align-items: center;
             gap: 2rem;
             padding-right: 1rem;
+            z-index: 100;
+            @media (max-width: $medium) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
         .navLi{
             position: relative;
@@ -38,7 +47,6 @@
             &:hover::after {
                 opacity: 1;
                 animation: hoverUnderline 1s ease forwards;
-
               }
           
             a{
@@ -54,6 +62,7 @@
 //NAV ICON
 
 .navIconContainer{
+    margin-top: 1rem;
     padding: 1rem;
     width: auto;
     height: 100%;
@@ -64,6 +73,13 @@
     gap: .5rem;
     margin-right: 2rem;
     cursor: pointer;
+    z-index: 100;
+    @media (max-width: $medium) {
+        margin-bottom: 1rem;
+        background: linear-gradient($fucsia, $gris);
+        border-radius: .5rem;
+        padding: 1rem;
+    }
     &:hover{
         transform: scale(1.1);
     }
@@ -98,8 +114,9 @@
     box-shadow: 2px 2px 15px 2px $fucsia;
     backdrop-filter: blur(.25px);
     -webkit-backdrop-filter: blur(1.5px);
-    -webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-    animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    -webkit-animation: openNav 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: openNav 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    padding-bottom: 1rem
 } 
 
 
@@ -113,36 +130,5 @@
     }
 }
 
- @-webkit-keyframes openNav {
-    0% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      -webkit-filter: blur(50px);
-              filter: blur(50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0) rotate(0deg);
-              transform: translateX(0) rotate(0deg);
-      -webkit-filter: blur(0);
-              filter: blur(0);
-      opacity: 1;
-    }
-  }
-  @keyframes openNav{
-    0% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      -webkit-filter: blur(50px);
-              filter: blur(50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0) rotate(0deg);
-              transform: translateX(0) rotate(0deg);
-      -webkit-filter: blur(0);
-              filter: blur(0);
-      opacity: 1;
-    }
-  }
+
   

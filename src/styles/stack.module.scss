@@ -7,6 +7,11 @@
     align-items: center;
     height: 50vh;
     width: 100%;
+    opacity: 0;
+    @media (max-width: $large){
+        flex-direction: column;
+        height: 100%;
+    }
     .exploradorContainer{
         margin: 0 auto;
         width: 50%;
@@ -15,10 +20,20 @@
         flex-direction: column;
         gap: 2rem;
         align-items: center;
+        @media (max-width: $large){
+            width: 100%;
+            padding-inline: 0;
+        }
     }
     .stackListContainer{
         padding: 2rem;
         width: 50%;
         height: 100%;
+        @media (max-width: $large){
+            width: 100%;
+        }
+        @media (max-width: $medium){
+            padding: 0;
+        }
     }
 }

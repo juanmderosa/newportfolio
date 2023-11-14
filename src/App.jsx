@@ -6,26 +6,22 @@ import { ServiciosPage } from "./pages/ServiciosPage";
 import { PortfolioPage } from "./pages/PortfolioPage";
 import { ContactoPage } from "./pages/ContactoPage";
 import { Nav } from "./components/Nav";
-
-/* 
-import { useEffect } from "react";
-import { mouseMoveAnimation } from "./helpers/mouseMoveAnimation"; */
+import { Footer } from "./components/Footer";
 
 function App() {
-  /*   useEffect(() => {
-    mouseMoveAnimation();
-  }, []); */
-
   return (
-    <BrowserRouter>
-      <Nav />
-      <HomePage />
-      <SobreMiPage />
-      <StackPage />
-      <ServiciosPage />
-      <PortfolioPage />
-      <ContactoPage />
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Nav />
+        <HomePage />
+        <SobreMiPage />
+        <StackPage />
+        <ServiciosPage />
+        <PortfolioPage />
+        <ContactoPage />
+      </BrowserRouter>
+      <Footer />
+    </>
   );
 }
 
