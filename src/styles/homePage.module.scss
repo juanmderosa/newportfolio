@@ -8,7 +8,14 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    background-image: url(../assets/backgrounds/background1.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position-x: 50%;
+    background-position-y: 70%;
+
     .mainTitle{
+      padding: 2rem;
         width: 100%;
         font-size: 6rem;
         letter-spacing: .3rem;
@@ -17,7 +24,13 @@
         text-shadow: 4px 2px 5px $fucsia;
         -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
         animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-
+        @media (max-width: $medium){
+          font-size: 5rem;
+          margin-top: 0;
+        }
+        @media (max-width: $small-s){
+          font-size: 4rem;
+        }
     }
     .mainSubtitle{
         font-size: 2rem;
@@ -31,6 +44,13 @@
         animation: type 3s steps(20) 1.5s forwards, blink .5s infinite step-end alternate;
         opacity: 0;
         overflow: hidden;
+        @media (max-width: $medium){
+          margin-bottom: 2rem;
+        font-size: 1.6rem;
+        }
+        @media (max-width: $small-s){
+          font-size: 1.3rem;
+        }
     }
 
     @keyframes type {

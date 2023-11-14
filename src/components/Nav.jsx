@@ -16,6 +16,7 @@ export const Nav = () => {
 
   const handleCloseHeader = (e) => {
     if (headerRef.current && !headerRef.current.contains(e.target)) {
+      console.log(e.target);
       setIsOpen(false);
     }
   };

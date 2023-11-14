@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./animaciones.scss";
 /* Normalize */
 *,
 *::before,
@@ -80,4 +81,24 @@ h6 {
     transform: scale(1) translateY(50px);
     opacity: 0;
   }
+}
+
+
+.animationIn{
+    animation: scale-in-hor-center 1s ease forwards;
+}
+
+.scale-in-ver-center {
+	-webkit-animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-ver-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.leftToRigth{
+  -webkit-animation: openNav 1s ease both;
+  animation: openNav 1s ease both;
+}
+
+.rithToLeft {
+	-webkit-animation: slide-in-right 1s ease both;
+	        animation: slide-in-right 1s ease both;
 }

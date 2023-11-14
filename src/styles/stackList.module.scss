@@ -3,9 +3,13 @@
 .stackList{
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(200px, 1fr));
+    justify-items: start;
+    align-items: center;
+    align-content: space-evenly;
+    @media (max-width: $large){
+        justify-items: center;
+
+    }
 }

@@ -16,6 +16,7 @@ export const Form = () => {
     <form
       onSubmit={handleSubmit(handleOnSubmit)}
       className={styles.formContainer}>
+      <h3 className={styles.formTitle}>Envíame un mensaje</h3>
       <div className={styles.inputContainer}>
         <input
           placeholder="Nombre"
