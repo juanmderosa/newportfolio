@@ -49,6 +49,8 @@ export const SobreMiPage = () => {
           </aside>
         </>
       )}
+      <div className={styles.backgroundSobreMi1}></div>
+      <div className={styles.backgroundSobreMi2}></div>
     </section>
   );
 };

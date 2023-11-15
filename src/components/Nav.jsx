@@ -78,7 +78,7 @@ export const Nav = () => {
             </li>
             <li className={styles.navLi}>
               <HashLink
-                to="/#portlofio"
+                to="/#portfolio"
                 smooth>
                 Portfolio
               </HashLink>

@@ -1,0 +1,10 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"> 
+<defs>
+        <linearGradient id="violetToBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color: #22014d" />
+        <stop offset="100%" style="stop-color: #fa1186" />
+        </linearGradient>
+    </defs>
+    <path
+        fill="url(#violetToBlue)" d="M49,-54.7C55.4,-42.6,46.9,-21.3,47.7,0.8C48.5,22.8,58.5,45.7,52.1,58.2C45.7,70.8,22.8,73.1,0.6,72.5C-21.7,71.9,-43.4,68.5,-54.4,56C-65.5,43.4,-65.9,21.7,-65.2,0.7C-64.4,-20.2,-62.6,-40.5,-51.5,-52.6C-40.5,-64.7,-20.2,-68.7,0.5,-69.3C21.3,-69.8,42.6,-66.8,49,-54.7Z" transform="translate(100 100)" />
+</svg>
