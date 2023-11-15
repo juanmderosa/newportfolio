@@ -32,6 +32,7 @@ export const StackPage = () => {
           </aside>
         </>
       )}
+      <div className={styles.backgroundStack}></div>
     </section>
   );
 };

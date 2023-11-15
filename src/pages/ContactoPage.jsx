@@ -28,6 +28,7 @@ export const ContactoPage = () => {
           </aside>
         </>
       )}
+      <div className={styles.backgroundContacto}></div>
     </section>
   );
 };

@@ -28,6 +28,7 @@ export const ServiciosPage = () => {
           </aside>
         </>
       )}
+      <div className={styles.backgroundServicios}></div>
     </section>
   );
 };

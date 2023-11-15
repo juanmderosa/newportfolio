@@ -1,0 +1,15 @@
+    <svg
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg">
+     <defs>
+        <linearGradient id="blueToPink" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color: #b1aeb8" />
+        <stop offset="100%" style="stop-color: #fa1186" />
+        </linearGradient>
+    </defs>
+    <path
+        fill="url(#blueToPink)"
+            d="M51.9,-40.5C64.9,-25.1,71.4,-3.6,66.9,14.8C62.3,33.3,46.6,48.8,28.3,57C9.9,65.2,-11.2,66.2,-22,56.7C-32.8,47.3,-33.3,27.5,-35.8,10.1C-38.2,-7.4,-42.6,-22.4,-37,-36.1C-31.4,-49.8,-15.7,-62.2,1.9,-63.7C19.4,-65.2,38.9,-55.8,51.9,-40.5Z"
+            transform="translate(100 100)"
+        />
+    </svg>
