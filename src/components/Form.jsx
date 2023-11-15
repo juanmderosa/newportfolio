@@ -2,10 +2,12 @@ import { Button } from "../components/Button";
 import styles from "../styles/form.module.scss";
 import check from "../assets/icons/verificado.png";
 import { useSendForm } from "../hooks/useSendForm";
+import { Loading } from "./loader";
 
 export const Form = () => {
   const {
     isSended,
+    isLoading,
     register,
     handleOnSubmit,
     handleSubmit,
@@ -88,9 +90,9 @@ export const Form = () => {
         )}
       </div>
       <div className={styles.buttonContainer}>
-        {!isSended ? (
-          <Button text="Enviar" />
-        ) : (
+        {isLoading && !isSended && <Loading />}
+        {!isLoading && !isSended && <Button text="Enviar" />}
+        {!isLoading && isSended && (
           <div className={styles.isSendedContainer}>
             <img
               src={check}

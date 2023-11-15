@@ -7,8 +7,13 @@ import { PortfolioPage } from "./pages/PortfolioPage";
 import { ContactoPage } from "./pages/ContactoPage";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
+import { useEffect } from "react";
+import { mouseMoveAnimation } from "./helpers/mouseMoveAnimation";
 
 function App() {
+  useEffect(() => {
+    mouseMoveAnimation();
+  });
   return (
     <>
       <BrowserRouter>

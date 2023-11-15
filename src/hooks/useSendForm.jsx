@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 
 export const useSendForm = () => {
   const [isSended, setIsSended] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     register,
@@ -12,6 +13,7 @@ export const useSendForm = () => {
   } = useForm();
 
   const handleOnSubmit = (data) => {
+    setIsLoading(true);
     fetch("https://formsubmit.co/ajax/e74f4160446c423aa38adcd68d983969", {
       method: "POST",
       headers: {
@@ -28,6 +30,7 @@ export const useSendForm = () => {
     })
       .then((response) => {
         if (response.ok) {
+          setIsLoading(false);
           setIsSended(true);
           reset();
           setTimeout(() => {
@@ -40,6 +43,7 @@ export const useSendForm = () => {
 
   return {
     isSended,
+    isLoading,
     register,
     handleOnSubmit,
     handleSubmit,
