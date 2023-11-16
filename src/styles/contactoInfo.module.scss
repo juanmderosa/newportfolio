@@ -13,13 +13,20 @@
         }
         .contactInfoLogo{
             width: 50px;
+            transition: all .5s ease;
+            &:hover{
+                transform: scale(1.1);
+            }
             @media (max-width: $large) {
                 width: 40px;
             }
         }
         .contactInfoTitle{
-           font-size: .8rem;
            text-align: center;
+           font-size: 1rem;
+        @media (max-width: $large) {
+            font-size: .8rem;
+        }
         }
     }
 }

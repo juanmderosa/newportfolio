@@ -13,7 +13,10 @@
     @media (max-width: $medium) {
         flex-direction: column;
         align-items: flex-start;
-        width: calc(100% - 2rem);
+        width: calc(50% - 2rem);
+    }
+    @media (max-width: $small-l) {
+        width: fit-content;
     }
     .nav{
         .navUl{
@@ -108,10 +111,10 @@
     }
 }
 .headerContainerOpen{
-    border: 1px solid $fucsia;
+    border: 1px solid hsla(330, 96%, 52%, 0.452);
     background: radial-gradient(closest-side,$azul, $violeta);
     border-radius: 16px;
-    box-shadow: 2px 2px 15px 2px $fucsia;
+    box-shadow: 2px 2px 15px 2px hsla(330, 96%, 52%, 0.603);
     backdrop-filter: blur(.25px);
     -webkit-backdrop-filter: blur(1.5px);
     -webkit-animation: openNav 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
@@ -126,7 +129,7 @@
         opacity: 1;
     }
     to{
-        mx-width: 100%;
+        max-width: 100%;
     }
 }
 

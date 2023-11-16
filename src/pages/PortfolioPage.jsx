@@ -13,48 +13,64 @@ import pricingComponent from "../assets/screenshots/screenshot-pricingcomponent-
 import rnDistribuciones from "../assets/screenshots/screenshot-rndistribuciones.png";
 import timeTracking from "../assets/screenshots/screenshot-timetraking-preview-desktop.png";
 import ecommerceComponent from "../assets/screenshots/screenshot-eccomerce-product-page.png";
-import { useRef, useState } from "react";
+import educapp from "../assets/screenshots/screenshot-educapp.png";
+import matespeak from "../assets/screenshots/screenshot-matespeak.png";
+import { useState } from "react";
 import { PortfolioInfo } from "../components/PortfolioInfo";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+/* import { useIntersectionObserver } from "../hooks/useIntersectionObserver"; */
 
 const projects = [
   {
     id: "1",
+    titulo: "EducApp",
+    imagen: educapp,
+    repositorio: "https://github.com/No-Country/c13-27-m-node-react",
+    livesite: "https://educapp-two.vercel.app/",
+  },
+  {
+    id: "2",
+    titulo: "MateSpeak",
+    imagen: matespeak,
+    repositorio: "https://github.com/No-Country/s11-15-m-csharp-reactt",
+    livesite: "https://s11-15-m-csharp-react.vercel.app/",
+  },
+  {
+    id: "3",
     titulo: "Advice Generator App",
     imagen: adviceGenerator,
     repositorio: "https://github.com/juanmderosa/advicegeneratorapp",
     livesite: "https://juanmderosa.github.io/advicegeneratorapp/",
   },
   {
-    id: "2",
+    id: "4",
     titulo: "Age Calculator",
     imagen: ageCalulator,
     repositorio: "https://github.com/juanmderosa/age-calculator",
     livesite: "https://juanmderosa.github.io/age-calculator/",
   },
   {
-    id: "3",
+    id: "5",
     titulo: "Comming soon with Form",
     imagen: commingSoon,
     repositorio: "https://github.com/juanmderosa/base-apparel-coming-soon",
     livesite: "https://juanmderosa.github.io/base-apparel-coming-soon/",
   },
   {
-    id: "4",
+    id: "6",
     titulo: "Expenses Chart",
     imagen: expensesChart,
     repositorio: "https://github.com/juanmderosa/expenses-chart-component",
     livesite: "https://juanmderosa.github.io/expenses-chart-component",
   },
   {
-    id: "5",
+    id: "7",
     titulo: "FAQ Accordion Card",
     imagen: faqAccordion,
     repositorio: "https://github.com/juanmderosa/react-faq-accordion-card",
     livesite: "https://juanmderosa.github.io/react-faq-accordion-card/",
   },
   {
-    id: "6",
+    id: "8",
     titulo: "Interactive Rating Component",
     imagen: ratingComponent,
     repositorio: "https://github.com/juanmderosa/advicegeneratorapp",
@@ -62,7 +78,7 @@ const projects = [
       "https://juanmderosa.github.io/react-interactive-rating-component/",
   },
   {
-    id: "7",
+    id: "9",
     titulo: "Intro Component with Form",
     imagen: introComponent,
     repositorio:
@@ -71,42 +87,42 @@ const projects = [
       "https://juanmderosa.github.io/Intro-component-with-sign-up-form/",
   },
   {
-    id: "8",
+    id: "10",
     titulo: "Newsletter Sign up",
     imagen: newsletterSignIn,
     repositorio: "https://github.com/juanmderosa/newsletter-sign-up",
     livesite: "https://juanmderosa.github.io/newsletter-sign-up/",
   },
   {
-    id: "9",
+    id: "11",
     titulo: "Notification Page",
     imagen: notificationPage,
     repositorio: "https://github.com/juanmderosa/notification-page",
     livesite: "https://juanmderosa.github.io/notification-page/",
   },
   {
-    id: "10",
+    id: "12",
     titulo: "Pricing Component",
     imagen: pricingComponent,
     repositorio: "https://github.com/juanmderosa/pricing-component",
     livesite: "https://juanmderosa.github.io/pricing-component/",
   },
   {
-    id: "11",
+    id: "13",
     titulo: "RN DISTRIBUCIONES",
     imagen: rnDistribuciones,
     repositorio: "https://github.com/juanmderosa/",
     livesite: "https://rndistribuciones.com.ar/",
   },
   {
-    id: "12",
+    id: "14",
     titulo: "Time Tracking",
     imagen: timeTracking,
     repositorio: "https://github.com/juanmderosa/timetracking-dashboard",
     livesite: "https://juanmderosa.github.io/timetracking-dashboard/",
   },
   {
-    id: "13",
+    id: "15",
     titulo: "E-commerce Product Page",
     imagen: ecommerceComponent,
     repositorio: "https://github.com/juanmderosa/ecommerceProductPageMain",
@@ -116,9 +132,9 @@ const projects = [
 
 export const PortfolioPage = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const portfolioInfoRef = useRef();
+  /*  const portfolioInfoRef = useRef(); */
 
-  const { show } = useIntersectionObserver(
+  /* const { show } = useIntersectionObserver(
     portfolioInfoRef,
     "scale-in-ver-center",
     {
@@ -126,28 +142,24 @@ export const PortfolioPage = () => {
       rootMargin: "0px",
       threshold: 0.4,
     }
-  );
+  ); */
 
   return (
     <section
       className={styles.portfolioContainer}
-      ref={portfolioInfoRef}
+      /*       ref={portfolioInfoRef} */
       id="portfolio">
-      {show && (
-        <>
-          <article className={styles.exploradorContainer}>
-            <ExploradorPortfolio
-              projects={projects}
-              selectedIndex={selectedIndex}
-            />
-          </article>
-          <PortfolioInfo
-            selectedIndex={selectedIndex}
-            setSelectedIndex={setSelectedIndex}
-            projects={projects}
-          />
-        </>
-      )}
+      <article className={styles.exploradorContainer}>
+        <ExploradorPortfolio
+          projects={projects}
+          selectedIndex={selectedIndex}
+        />
+      </article>
+      <PortfolioInfo
+        selectedIndex={selectedIndex}
+        setSelectedIndex={setSelectedIndex}
+        projects={projects}
+      />
     </section>
   );
 };

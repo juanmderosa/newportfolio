@@ -62,14 +62,14 @@
     }
     .backgroundContacto{
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
         background: url(../assets/svg/Blob1.svg);
         background-repeat: no-repeat;
         -webkit-animation: jello-diagonal-1 7s ease infinite;
         animation: jello-diagonal-1 7s ease infinite;
         rotate: 50deg;
-        top: 25%;
+        top: 35%;
         @media (max-width: $large) {
             top: 10%
         }

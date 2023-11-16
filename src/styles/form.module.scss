@@ -32,6 +32,7 @@
             overflow-y: hidden;
             resize: none;
             border: none;
+            height: 8rem;
             &:focus{
                 outline: none;
                 border: 1px solid $gris;

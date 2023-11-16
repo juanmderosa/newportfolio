@@ -35,14 +35,20 @@ export const ContactoInfo = () => {
           <p className={styles.contactInfoTitle}>Github</p>
         </li>
       </a>
-      <li className={styles.contactInfoListItem}>
-        <img
-          src={whatsappImg}
-          alt="whatsapp logo"
-          className={styles.contactInfoLogo}
-        />
-        <p className={styles.contactInfoTitle}>+54911-5463-2571</p>
-      </li>
+      <a
+        href="https://wa.me/5491154632571"
+        target="_blank"
+        rel="noreferrer"
+        className={styles.linkContacto}>
+        <li className={styles.contactInfoListItem}>
+          <img
+            src={whatsappImg}
+            alt="whatsapp logo"
+            className={styles.contactInfoLogo}
+          />
+          <p className={styles.contactInfoTitle}>+54911-5463-2571</p>
+        </li>
+      </a>
       <li className={styles.contactInfoListItem}>
         <img
           src={emailImg}
